@@ -1,0 +1,17 @@
+{
+  "name": "@rig-tools/core",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Tucker Hawkinson <public@hawkinson.dev>",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
