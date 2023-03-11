@@ -14,12 +14,13 @@
     "node": ">=14.0.0"
   },
   "devDependencies": {
-    "@types/yargs": "^17.0.22",
     "@types/node": "^18.15.0",
-    "typescript": "^4.7.4",
-    "prettier": "latest"
+    "@types/yargs": "^17.0.22",
+    "prettier": "latest",
+    "typescript": "^4.7.4"
   },
   "dependencies": {
+    "chalk": "^5.2.0",
     "yargs": "^17.7.0"
   },
   "packageManager": "yarn@1.22.19"
