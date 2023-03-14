@@ -2,6 +2,9 @@ import { join } from 'path';
 import { readJSONSync } from 'fs-extra';
 
 type PackageJson = {
+  name: string;
+  // TODO: Tucker This wont always be defined
+  main: string;
   dependencies: Record<string, string>;
   devDependencies: Record<string, string>;
   rig?: {
@@ -9,7 +12,13 @@ type PackageJson = {
   };
 };
 
-export const getRigPlugins = () => {
+type PluginData = {
+  name: string;
+  packagePath: string;
+  mainPath: string;
+};
+
+export const getRigPlugins = (): PluginData[] => {
   const cwd = process.cwd();
 
   const packagePath = join(cwd, 'package.json');
@@ -24,16 +33,20 @@ export const getRigPlugins = () => {
     ...Object.keys(devDependencies),
   ];
 
-  const activePlugins = [];
+  const rigPlugins = [];
 
   for (const dep of allDeps) {
     const depPackagePath = join(cwd, 'node_modules', dep, 'package.json');
     const depPackageContent: PackageJson = readJSONSync(depPackagePath);
 
     if (depPackageContent.rig && depPackageContent.rig.plugin) {
-      activePlugins.push(dep);
+      rigPlugins.push({
+        name: depPackageContent.name,
+        packagePath: depPackagePath,
+        mainPath: join(cwd, 'node_modules', dep, depPackageContent.main),
+      });
     }
   }
 
-  return activePlugins;
+  return rigPlugins;
 };

@@ -5,6 +5,7 @@
   "scripts": {
     "build": "tsc"
   },
+  "main": "dist",
   "author": "Tucker Hawkinson <public@hawkinson.dev>",
   "license": "MIT",
   "devDependencies": {

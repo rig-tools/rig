@@ -9,9 +9,6 @@
   "scripts": {
     "build": "turbo run build"
   },
-  "bin": {
-    "rig": "dist/index.js"
-  },
   "author": "Tucker Hawkinson <public@hawkinson.dev>",
   "license": "MIT",
   "engines": {

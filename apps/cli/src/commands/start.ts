@@ -1,4 +1,4 @@
-import { net } from '@core';
+import { net } from '../modules/core';
 import { CliCommand } from './types';
 
 const start: CliCommand = {
