@@ -1,0 +1,24 @@
+{
+  "name": "@rig-tools/cli",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc"
+  },
+  "bin": {
+    "rig": "dist/index.js"
+  },
+  "author": "Tucker Hawkinson <public@hawkinson.dev>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.15.0",
+    "@types/fs-extra": "^11.0.1",
+    "@types/yargs": "^17.0.22",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "yargs": "^17.7.0",
+    "fs-extra": "^11.1.0"
+  }
+}

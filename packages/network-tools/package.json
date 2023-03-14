@@ -1,0 +1,16 @@
+{
+  "name": "@rig-tools/network-tools",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Tucker Hawkinson <public@hawkinson.dev>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "rig": {
+    "plugin": true
+  }
+}

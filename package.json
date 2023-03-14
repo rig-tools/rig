@@ -1,9 +1,13 @@
 {
-  "name": "@rig-tools/cli",
+  "name": "rig",
   "version": "0.0.0",
-  "private": false,
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "build": "tsc"
+    "build": "turbo run build"
   },
   "bin": {
     "rig": "dist/index.js"
@@ -14,14 +18,8 @@
     "node": ">=14.0.0"
   },
   "devDependencies": {
-    "@types/node": "^18.15.0",
-    "@types/yargs": "^17.0.22",
     "prettier": "latest",
-    "typescript": "^4.7.4"
-  },
-  "dependencies": {
-    "chalk": "^5.2.0",
-    "yargs": "^17.7.0"
+    "turbo": "latest"
   },
   "packageManager": "yarn@1.22.19"
 }

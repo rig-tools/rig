@@ -1,12 +1,12 @@
-import { net } from '../packages/core';
+import { net } from '@core';
 import { CliCommand } from './types';
 
 const start: CliCommand = {
   command: 'start',
   description: 'Start rig server',
   usage: '$0 [args]',
-  builder: (yargs) => {},
-  handler: (argv) => {
+  builder: (_yargs) => {},
+  handler: (_argv) => {
     net.startServer();
   },
 };
